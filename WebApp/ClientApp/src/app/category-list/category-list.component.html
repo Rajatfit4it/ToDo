@@ -1,0 +1,21 @@
+
+<h2>Categories</h2>
+<a [routerLink]='["/category/add"]'>Add new category</a>
+<div>
+  <table>
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody *ngIf="categories">
+      <tr *ngFor="let category of categories">
+        <th>{{category.id}}</th>
+        <th>{{category.name}}</th>
+        <th><a [routerLink]='["/category/view/"]'>View</a></th>
+      </tr>
+    </tbody>
+  </table>
+</div>

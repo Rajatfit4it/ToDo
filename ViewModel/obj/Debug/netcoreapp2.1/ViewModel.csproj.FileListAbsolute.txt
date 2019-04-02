@@ -1,0 +1,9 @@
+C:\Users\rajat.sharma\source\repos\ToDo\ViewModel\bin\Debug\netcoreapp2.1\ViewModel.deps.json
+C:\Users\rajat.sharma\source\repos\ToDo\ViewModel\bin\Debug\netcoreapp2.1\ViewModel.dll
+C:\Users\rajat.sharma\source\repos\ToDo\ViewModel\bin\Debug\netcoreapp2.1\ViewModel.pdb
+C:\Users\rajat.sharma\source\repos\ToDo\ViewModel\obj\Debug\netcoreapp2.1\ViewModel.csprojAssemblyReference.cache
+C:\Users\rajat.sharma\source\repos\ToDo\ViewModel\obj\Debug\netcoreapp2.1\ViewModel.csproj.CoreCompileInputs.cache
+C:\Users\rajat.sharma\source\repos\ToDo\ViewModel\obj\Debug\netcoreapp2.1\ViewModel.AssemblyInfoInputs.cache
+C:\Users\rajat.sharma\source\repos\ToDo\ViewModel\obj\Debug\netcoreapp2.1\ViewModel.AssemblyInfo.cs
+C:\Users\rajat.sharma\source\repos\ToDo\ViewModel\obj\Debug\netcoreapp2.1\ViewModel.dll
+C:\Users\rajat.sharma\source\repos\ToDo\ViewModel\obj\Debug\netcoreapp2.1\ViewModel.pdb

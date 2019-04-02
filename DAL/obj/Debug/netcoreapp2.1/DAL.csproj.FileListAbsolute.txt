@@ -1,0 +1,12 @@
+C:\Users\rajat.sharma\source\repos\ToDo\DAL\bin\Debug\netcoreapp2.1\DAL.deps.json
+C:\Users\rajat.sharma\source\repos\ToDo\DAL\bin\Debug\netcoreapp2.1\DAL.dll
+C:\Users\rajat.sharma\source\repos\ToDo\DAL\obj\Debug\netcoreapp2.1\DAL.csprojAssemblyReference.cache
+C:\Users\rajat.sharma\source\repos\ToDo\DAL\obj\Debug\netcoreapp2.1\DAL.csproj.CoreCompileInputs.cache
+C:\Users\rajat.sharma\source\repos\ToDo\DAL\obj\Debug\netcoreapp2.1\DAL.AssemblyInfoInputs.cache
+C:\Users\rajat.sharma\source\repos\ToDo\DAL\obj\Debug\netcoreapp2.1\DAL.AssemblyInfo.cs
+C:\Users\rajat.sharma\source\repos\ToDo\DAL\bin\Debug\netcoreapp2.1\DAL.pdb
+C:\Users\rajat.sharma\source\repos\ToDo\DAL\bin\Debug\netcoreapp2.1\Microsoft.EntityFrameworkCore.dll
+C:\Users\rajat.sharma\source\repos\ToDo\DAL\bin\Debug\netcoreapp2.1\Microsoft.EntityFrameworkCore.xml
+C:\Users\rajat.sharma\source\repos\ToDo\DAL\obj\Debug\netcoreapp2.1\DAL.csproj.CopyComplete
+C:\Users\rajat.sharma\source\repos\ToDo\DAL\obj\Debug\netcoreapp2.1\DAL.dll
+C:\Users\rajat.sharma\source\repos\ToDo\DAL\obj\Debug\netcoreapp2.1\DAL.pdb

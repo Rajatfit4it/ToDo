@@ -1,0 +1,16 @@
+C:\Users\rajat.sharma\source\repos\ToDo\BLL\bin\Debug\netcoreapp2.1\BLL.deps.json
+C:\Users\rajat.sharma\source\repos\ToDo\BLL\bin\Debug\netcoreapp2.1\BLL.dll
+C:\Users\rajat.sharma\source\repos\ToDo\BLL\bin\Debug\netcoreapp2.1\BLL.pdb
+C:\Users\rajat.sharma\source\repos\ToDo\BLL\bin\Debug\netcoreapp2.1\DAL.dll
+C:\Users\rajat.sharma\source\repos\ToDo\BLL\bin\Debug\netcoreapp2.1\ViewModel.dll
+C:\Users\rajat.sharma\source\repos\ToDo\BLL\bin\Debug\netcoreapp2.1\Microsoft.EntityFrameworkCore.dll
+C:\Users\rajat.sharma\source\repos\ToDo\BLL\bin\Debug\netcoreapp2.1\DAL.pdb
+C:\Users\rajat.sharma\source\repos\ToDo\BLL\bin\Debug\netcoreapp2.1\ViewModel.pdb
+C:\Users\rajat.sharma\source\repos\ToDo\BLL\bin\Debug\netcoreapp2.1\Microsoft.EntityFrameworkCore.xml
+C:\Users\rajat.sharma\source\repos\ToDo\BLL\obj\Debug\netcoreapp2.1\BLL.csprojAssemblyReference.cache
+C:\Users\rajat.sharma\source\repos\ToDo\BLL\obj\Debug\netcoreapp2.1\BLL.csproj.CoreCompileInputs.cache
+C:\Users\rajat.sharma\source\repos\ToDo\BLL\obj\Debug\netcoreapp2.1\BLL.AssemblyInfoInputs.cache
+C:\Users\rajat.sharma\source\repos\ToDo\BLL\obj\Debug\netcoreapp2.1\BLL.AssemblyInfo.cs
+C:\Users\rajat.sharma\source\repos\ToDo\BLL\obj\Debug\netcoreapp2.1\BLL.csproj.CopyComplete
+C:\Users\rajat.sharma\source\repos\ToDo\BLL\obj\Debug\netcoreapp2.1\BLL.dll
+C:\Users\rajat.sharma\source\repos\ToDo\BLL\obj\Debug\netcoreapp2.1\BLL.pdb

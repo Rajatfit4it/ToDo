@@ -10,5 +10,7 @@ namespace DAL.Contracts
     {
         Task<IEnumerable<dm.Category>> GetAll();
         Task AddAsync(dm.Category category);
+        Task<dm.Category> GetCategoryAsync(int id);
+        void RemoveCategory(dm.Category category);
     }
 }

@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Http } from '@angular/http';
+import { Category } from '../models/category';
+import { CategoryService } from '../category.service';
+import { Router, ActivatedRoute, Params } from '@angular/router';
+
 
 @Component({
   selector: 'app-category-form',
@@ -7,9 +12,37 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoryFormComponent implements OnInit {
 
-  constructor() { }
+  category: Category = { name: '', id: 0 };
+
+  constructor(private categoryService: CategoryService,
+    private router: Router,
+    private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
+    this.activatedRoute.params.subscribe(params => {
+      this.category.id = params['id'];
+    });
+    if (this.category.id && this.category.id != undefined && this.category.id > 0) {
+      this.categoryService.getCategory(this.category.id)
+        .subscribe(res => this.category = res
+        );
+    } 
+  }
+
+  submit() {
+    if (this.category.id > 0) {
+      this.categoryService.updateCategory(this.category)
+        .subscribe(res => {
+          console.log(res);
+          this.router.navigate(['/category/' + this.category.id]);
+        });
+    } else {
+      this.categoryService.addCategory(this.category)
+        .subscribe(res => {
+          console.log(res);
+          this.router.navigate(['/categories']);
+        });
+    }
   }
 
 }

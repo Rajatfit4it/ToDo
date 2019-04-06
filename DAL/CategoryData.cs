@@ -26,5 +26,17 @@ namespace DAL
         {
             await _context.Categories.AddAsync(category);
         }
+
+        public async Task<dm.Category> GetCategoryAsync(int id)
+        {
+            return await _context.Categories.FindAsync(id);
+        }
+
+        public void RemoveCategory(dm.Category category)
+        {
+            _context.Categories.Remove(category);
+        }
+
+
     }
 }

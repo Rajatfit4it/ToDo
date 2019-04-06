@@ -1,3 +1,14 @@
-<p>
-  category-view works!
-</p>
+<div>
+  <div>
+
+    <div>
+      <label for="name">Category Name</label>
+      {{category.name}}
+    </div>
+    <div>
+      <button type="button" class="btn btn-primary" (click)="edit()">Edit</button>
+      <button type="button" class="btn btn-danger" (click)="delete()">Delete</button>
+      <a class="btn btn-default" [routerLink]='["/categories/"]'>Back To List</a>
+    </div>
+  </div>
+</div>

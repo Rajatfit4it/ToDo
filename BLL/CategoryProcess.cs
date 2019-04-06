@@ -38,5 +38,40 @@ namespace BLL
             await _unitOfWork.CategoryData.AddAsync(dmCategory);
             await _unitOfWork.SaveChangesAsync();
         }
+
+        public async Task<vm.Category> GetCategoryAsync(int id)
+        {
+            var result = await _unitOfWork.CategoryData.GetCategoryAsync(id);
+            if(result != null)
+                return new vm.Category(){ Id = result.Id, Name = result.Name};
+            return null;
+        }
+
+        public async Task<bool> UpdateAsync(vm.Category category)
+        {
+            var dmCategory = await _unitOfWork.CategoryData.GetCategoryAsync(category.Id);
+            if (dmCategory != null)
+            {
+                dmCategory.Name = category.Name;
+                await _unitOfWork.SaveChangesAsync();
+                return true;
+            }
+            return false;
+        }
+
+        public async Task<bool> RemoveCategoryAsync(int id)
+        {
+            var dmCategory = await _unitOfWork.CategoryData.GetCategoryAsync(id);
+            if (dmCategory != null)
+            {
+                _unitOfWork.CategoryData.RemoveCategory(dmCategory);
+                await _unitOfWork.SaveChangesAsync();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

@@ -1,0 +1,23 @@
+﻿Nlog vs log4net -- compare them and use one of them
+TODO
+ Category: study, office, other
+
+ Tags: dotnet core, mvc, angular, other
+ 
+ DueDate: today, this week, any specific date
+ 
+ common paging module
+ 
+ category section to be appear to admin only
+ 
+ all sub url of category to be moved to child module
+ 
+ validations - both client and server side
+ 
+ automapper
+ 
+ to do page - add quick and detailed description form (quick will have only one field and detailed page have other fields also)
+ 
+ dashboard - show no of task added / task completed in last week/month
+ 
+ add +icon at the bottom of every page. click of +will  open small popup with textbox and dropdown(to do, notes, etc) and submit.

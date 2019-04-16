@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BLL.Contracts;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ViewModel;
 
@@ -33,6 +34,7 @@ namespace WebApp.Controllers
         }
 
         [Route("{id}")]
+        [Authorize]
         public async Task<IActionResult> GetCategoryAsync(int id)
         {
             var category = await _categoryProcess.GetCategoryAsync(id);

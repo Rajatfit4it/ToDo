@@ -13,6 +13,8 @@ namespace WebApp.Mapping
         public MappingProfile()
         {
             CreateMap<dm.Category, vm.Category>().ReverseMap();
+            CreateMap<dm.User, vm.Auth.UserInfo>();
+            CreateMap<vm.Auth.UserSignUp, dm.User>();
         }
     }
 }

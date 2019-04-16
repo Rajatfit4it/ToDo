@@ -1,3 +1,5 @@
+using System.Text;
+using System.Threading.Tasks;
 using BLL;
 using BLL.Contracts;
 using DAL;
@@ -12,6 +14,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using AutoMapper;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
 
 namespace WebApp
 {
@@ -31,8 +35,35 @@ namespace WebApp
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddDbContext<dm.ToDoContext>(options => options.UseInMemoryDatabase());
             services.AddScoped<ICategoryProcess, CategoryProcess>();
+            services.AddScoped<IUserProcess, UserProcess>();
+            var configSection = Configuration.GetSection("AppSettings");
+            services.Configure<AppSettings>(configSection);
+            var appSettings = configSection.Get<AppSettings>();
+            var key = Encoding.ASCII.GetBytes(appSettings.Secret);
+
+            services.AddAuthentication(x =>
+                {
+                    x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                    x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                    x.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+                })
+                .AddJwtBearer(x =>
+                {
+                    x.RequireHttpsMetadata = false;
+                    x.SaveToken = true;
+                    x.TokenValidationParameters = new TokenValidationParameters()
+                    {
+                        IssuerSigningKey = new SymmetricSecurityKey(key),
+                        ValidateIssuer = true,
+                        ValidateAudience = true,
+                        ValidIssuer = "www.test.com",
+                        ValidAudience = "www.test.com",
+                    };
+                });
+
             services.AddScoped<ICategoryData, CategoryData>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<IUserData, UserData>();
 
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
@@ -58,6 +89,7 @@ namespace WebApp
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
+            app.UseAuthentication();
 
             app.UseMvc(routes =>
             {

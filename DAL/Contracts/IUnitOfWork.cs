@@ -8,7 +8,7 @@ namespace DAL.Contracts
     public  interface IUnitOfWork
     {
         ICategoryData CategoryData { get; set; }
-        
+        IUserData UserData { get; set; }
         Task SaveChangesAsync();
     }
 }

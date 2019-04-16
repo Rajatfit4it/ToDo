@@ -14,14 +14,12 @@ namespace BLL
         private readonly IUnitOfWork _unitOfWork;
 
         private readonly IMapper _mapper;
-        //private readonly ICategoryData _categoryData;
 
         public CategoryProcess(IUnitOfWork unitOfWork, ICategoryData categoryData, IMapper mapper)
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;
             _unitOfWork.CategoryData = categoryData;
-            //_categoryData = categoryData;
         }
 
         public async Task<IEnumerable<vm.Category>> GetAll()

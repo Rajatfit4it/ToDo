@@ -11,6 +11,7 @@ namespace DAL
     {
         private readonly dm.ToDoContext _context;
         public ICategoryData CategoryData { get; set; }
+        public IUserData UserData { get; set; }
 
         public UnitOfWork(dm.ToDoContext context)
         {

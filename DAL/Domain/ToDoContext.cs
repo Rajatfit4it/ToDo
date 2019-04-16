@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
-using dm = DAL.Domain;
 
 namespace DAL.Domain
 {
@@ -13,7 +12,8 @@ namespace DAL.Domain
 
         }
 
-        public DbSet<dm.Category> Categories { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

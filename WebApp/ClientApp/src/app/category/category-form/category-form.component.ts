@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
-import { Category } from '../models/category';
-import { CategoryService } from '../category.service';
+import { Category } from '../../models/category';
+import { CategoryService } from '../../services/category.service';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 
 

@@ -10,10 +10,10 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
-import { CategoryListComponent } from './category-list/category-list.component';
-import { CategoryFormComponent } from './category-form/category-form.component';
-import { CategoryViewComponent } from './category-view/category-view.component';
-import { CategoryService } from "./category.service";
+import { CategoryListComponent } from './category/category-list/category-list.component';
+import { CategoryFormComponent } from './category/category-form/category-form.component';
+import { CategoryViewComponent } from './category/category-view/category-view.component';
+import { CategoryService } from "./services/category.service";
 
 @NgModule({
   declarations: [

@@ -34,7 +34,7 @@ namespace WebApp.Controllers
         }
 
         [Route("{id}")]
-        [Authorize]
+        //[Authorize]
         public async Task<IActionResult> GetCategoryAsync(int id)
         {
             var category = await _categoryProcess.GetCategoryAsync(id);

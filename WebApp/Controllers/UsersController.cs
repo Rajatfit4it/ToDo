@@ -36,7 +36,7 @@ namespace WebApp.Controllers
             try
             {
                 string message = await _userProcess.SignUpAsync(userSignUp);
-                return Ok(message);
+                return Ok(new {message = message});
             }
             catch (Exception ex)
             {
@@ -54,11 +54,13 @@ namespace WebApp.Controllers
             if (user == null)
                 return NotFound("Invalid credentials!!!");
 
-            user.Token = GenerateToken(user);
+            GenerateToken(user, out var token, out var expiresAt);
+            user.Token = token;
+            user.ExpiresAt = expiresAt.Subtract(DateTime.Now).TotalMilliseconds;
             return Ok(user);
         }
 
-        private string GenerateToken(UserInfo userInfo)
+        private void GenerateToken(UserInfo userInfo, out string token, out DateTime expiresAt)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.ASCII.GetBytes(_appSettings.Secret);
@@ -71,15 +73,15 @@ namespace WebApp.Controllers
             };
             var signingCredentials = new SigningCredentials(new SymmetricSecurityKey(key),
                 SecurityAlgorithms.HmacSha256Signature);
-            var token = new JwtSecurityToken(
+            expiresAt = DateTime.Now.AddHours(1);
+            var jwtToken = new JwtSecurityToken(
                 issuer: "www.test.com",
                 audience: "www.test.com",
                 claims: claims,
-                expires: DateTime.Now.AddHours(1),
+                expires: expiresAt,
                 signingCredentials: signingCredentials
-                );
-            var tokenString = tokenHandler.WriteToken(token);
-            return tokenString;
+            );
+            token = tokenHandler.WriteToken(jwtToken);
         }
 
     }

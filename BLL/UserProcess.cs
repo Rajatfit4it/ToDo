@@ -47,6 +47,9 @@ namespace BLL
                 return "UserName already exists!!!";
             try
             {
+                if (userSignUp.UserName == "admin")
+                    userSignUp.Role = "Admin";
+
                 var dmUser = _mapper.Map<dm.User>(userSignUp);
                 CreatePasswordHash(userSignUp.Password, out var passwordHash, out var passwordSalt);
                 dmUser.PasswordHash = passwordHash;

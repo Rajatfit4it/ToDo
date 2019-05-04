@@ -1,0 +1,31 @@
+<h2>Sign Up</h2>
+{{signUpModel | json}}
+<form (submit)="submit()">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" name="name" placeholder="Enter Name"
+           [(ngModel)]="signUpModel.name">
+  </div>
+  <div class="form-group">
+    <label for="userName">UserName</label>
+    <input type="text" class="form-control" name="userName" placeholder="Enter UserName"
+           [(ngModel)]="signUpModel.userName">
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" class="form-control" name="password" placeholder="Password"
+           [(ngModel)]="signUpModel.password">
+  </div>
+  <div class="form-group">
+    <label for="confirmPassword">Confirm Password</label>
+    <input type="password" class="form-control" name="confirmPassword" placeholder="Confirm Password"
+           [(ngModel)]="confirmPassword">
+  </div>
+  <div class="form-group">
+    <label for="email">Email address</label>
+    <input type="text" class="form-control" name="email" placeholder="Enter Email address"
+           [(ngModel)]="signUpModel.email">
+  </div>
+  <button type="submit" class="btn btn-primary">SignUp</button>
+  {{response}}
+</form>

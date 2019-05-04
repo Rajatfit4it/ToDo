@@ -14,6 +14,9 @@ import { CategoryListComponent } from './category/category-list/category-list.co
 import { CategoryFormComponent } from './category/category-form/category-form.component';
 import { CategoryViewComponent } from './category/category-view/category-view.component';
 import { CategoryService } from "./services/category.service";
+import { AccountService } from "./services/account.service";
+import { LoginComponent } from './account/login/login.component';
+import { SignupComponent } from './account/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,9 @@ import { CategoryService } from "./services/category.service";
     FetchDataComponent,
     CategoryListComponent,
     CategoryFormComponent,
-    CategoryViewComponent
+    CategoryViewComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -38,11 +43,15 @@ import { CategoryService } from "./services/category.service";
       { path: 'categories', component: CategoryListComponent },
       { path: 'category/add', component: CategoryFormComponent },
       { path: 'category/:id/edit', component: CategoryFormComponent },
-      { path: 'category/:id', component: CategoryViewComponent }
-])
+      { path: 'category/:id', component: CategoryViewComponent },
+      { path: 'login', component: LoginComponent },
+      { path: 'signup', component: SignupComponent },
+      { path: 'logout', redirectTo:'/'}
+    ])
   ],
   providers: [
-    CategoryService
+    CategoryService,
+    AccountService
     ],
   bootstrap: [AppComponent]
 })

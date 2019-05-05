@@ -1,14 +1,14 @@
-<div>
-  <div>
 
-    <div>
-      <label for="name">Category Name</label>
-      {{category.name}}
-    </div>
-    <div>
-      <button type="button" class="btn btn-primary" (click)="edit()">Edit</button>
-      <button type="button" class="btn btn-danger" (click)="delete()">Delete</button>
-      <a class="btn btn-default" [routerLink]='["/categories/"]'>Back To List</a>
-    </div>
+<h2>Category Details</h2>
+<div class="body-content">
+
+  <div>
+    <label for="name">Category Name</label>
+    {{category.name}}
+  </div>
+  <div>
+    <button type="button" class="btn btn-primary" (click)="edit()">Edit</button>
+    <button type="button" class="btn btn-danger" (click)="delete()">Delete</button>
+    <a class="btn btn-default" [routerLink]='["/categories/"]'>Back To List</a>
   </div>
 </div>

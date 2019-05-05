@@ -17,6 +17,8 @@ import { CategoryService } from "./services/category.service";
 import { AccountService } from "./services/account.service";
 import { LoginComponent } from './account/login/login.component';
 import { SignupComponent } from './account/signup/signup.component';
+import { TokenInterceptor } from "./token.interceptor";
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -51,7 +53,12 @@ import { SignupComponent } from './account/signup/signup.component';
   ],
   providers: [
     CategoryService,
-    AccountService
+    AccountService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true
+    }
     ],
   bootstrap: [AppComponent]
 })

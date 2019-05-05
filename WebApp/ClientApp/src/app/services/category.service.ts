@@ -1,27 +1,24 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 import 'rxjs/add/operator/map';
 import { Category } from '../models/category';
 
 @Injectable()
 export class CategoryService {
 
-  constructor(private http: Http) { }
+  constructor(private http: HttpClient) { }
 
   GetCategories() {
-    return this.http.get('/api/category/')
-      .map(res => res.json());
+    return this.http.get<Category>('/api/category/');
 
   }
 
   addCategory(category) {
     return this.http.post('/api/category/', category);
-    //.map(res => res.json());
   }
 
   getCategory(id) {
-    return this.http.get('/api/category/' + id)
-      .map(res => res.json());
+    return this.http.get<Category>('/api/category/' + id);
   }
 
   updateCategory(category: Category) {
